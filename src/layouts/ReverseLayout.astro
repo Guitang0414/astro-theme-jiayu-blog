@@ -6,6 +6,7 @@ import Header from "~/components/Header.astro";
 import Footer from "~/components/Footer.astro";
 import { SEO } from "astro-seo";
 import { getImage } from "astro:assets";
+import GoogleAnalytics from "./GoogleAnalytics.astro";
 
 interface Props {
   title?: string;
@@ -38,6 +39,7 @@ const optimizedImage = new URL(
 
 <html lang="en">
   <head>
+    <GoogleAnalytics></GoogleAnalytics>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="baidu-site-verification" content="codeva-4XvEX9iV16" />

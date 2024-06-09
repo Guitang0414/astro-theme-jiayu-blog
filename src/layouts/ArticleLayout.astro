@@ -5,6 +5,7 @@ import "~/styles/heti.min.css";
 import { SEO } from "astro-seo";
 import { getImage } from "astro:assets";
 import TableOfContents from "~/pages/posts/TableOfContents.astro";
+import GoogleAnalytics from "./GoogleAnalytics.astro";
 
 interface Props {
   content:{
@@ -38,15 +39,7 @@ const optimizedImage = new URL(
 
 <html lang="en">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6RBG4RB3C"
-    ></script>
-    <script is:inline>window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-V6RBG4RB3C");</script>
+    <GoogleAnalytics></GoogleAnalytics>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <SEO
